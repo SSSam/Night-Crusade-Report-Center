@@ -1,6 +1,16 @@
-# NightCrusadeApp
+# Night Crusade Report Center
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+
+## Program Snapshot:
+### Landing Page: 
+<img width="960" alt="image" src="https://github.com/SSSam/Night-Crusade--Report-Center/assets/72668861/16608b99-a13c-4856-ad92-23649bd1cae0">
+
+### Report Form:
+<img width="933" alt="image" src="https://github.com/SSSam/Night-Crusade--Report-Center/assets/72668861/089ce503-7dd9-4b20-bd1f-06ea270fd1fa">
+
+### Nuisance Detail Page:
+<img width="932" alt="image" src="https://github.com/SSSam/Night-Crusade--Report-Center/assets/72668861/6f8f6098-f255-4a53-be84-fcb044a3d2d6">
 
 ## Development server
 
@@ -14,14 +24,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
