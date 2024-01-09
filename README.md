@@ -1,6 +1,5 @@
 # Night Crusade Report Center
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+Spot something abnormal? Report the incident to the Night Crusade Center ASAP, and the Hero will be on the way!
 
 ## Program Snapshot:
 ### Landing Page: 
@@ -11,8 +10,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Nuisance Detail Page:
 <img width="932" alt="image" src="https://github.com/SSSam/Night-Crusade--Report-Center/assets/72668861/6f8f6098-f255-4a53-be84-fcb044a3d2d6">
+<img width="932" alt="image" src="https://github.com/SSSam/Night-Crusade--Report-Center/assets/72668861/2b654349-7c52-48b6-8847-0deff659cf2b">
+
 
 ## Development server
+### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
