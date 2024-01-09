@@ -1,0 +1,33 @@
+<div class="container">
+<table>
+  <thead>
+    <tr>
+      <th (click)="getall('locationName')" style="cursor: pointer;">🎯 Location</th>
+      <th (click)="getall('troubleMaker')" style="cursor: pointer;">⚠️ Nuisance Identified</th>
+      <th (click)="getall('dateTime')" style="cursor: pointer;"> Time Reported</th>
+      <th (click)="getall('status')" style="cursor: pointer;"> Status</th>
+      <th>Info</th>
+      <th colspan="2">Authorized Use Only</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let report of sortedData">
+      <tr>
+        <td>{{ report.locationName }}</td>
+        <td>{{ report.troubleMaker }}</td>
+        <td>{{ report.dateTime |date: "MMM d, y, HH:mm"}}</td>
+        <td  [ngStyle]="getStatusCellStyle(report.status)">{{ report.status}}</td>
+        <td>
+          <a class="report-detail" [routerLink]="['/report', report.key]" (click)="openDetailsModal(report)">Details</a>
+        </td>
+        <td class="update-cell">
+          <button class="update-bttn" (click)="updateStatus(report)">Update</button></td>
+          <td class="del-cell">
+          <button class="del-bttn" (click)="deleteReport(report)">Delete</button>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+</div>

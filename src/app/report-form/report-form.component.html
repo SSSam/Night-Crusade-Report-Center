@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <fieldset>
+        <h2>Nuisance Reporting Form</h2>
+        <p class="note">"⚝" indicates required field</p>
+
+        <label for="reporterName">⚝ Your Name:</label><br />
+        <input
+          type="text"
+          id="reporterName"
+          name="reporterName"
+          required
+          formControlName="reporterName"
+          placeholder=" Samuel"
+
+        /><br />
+
+        <label for="reporterPhone">⚝ Your Phone Number (Digits 0-9 only)</label
+        ><br />
+        <input
+          id="reporterPhone"
+          name="reporterPhone"
+          formControlName="reporterPhone"
+          placeholder=" 6040123456"
+          type="number"
+        /><br />
+
+        <label for="troubleMaker">⚝ Name of the Spotted Trouble Maker:</label
+        ><br />
+        <input
+          type="text"
+          id="troubleMaker"
+          name="troubleMaker"
+          formControlName="troubleMaker"
+          placeholder=" Scary Screaming Sean"
+
+        /><br />
+
+        <label for="locationSelection">Select from Existed Location:</label><br />
+        <select
+          formControlName="locationSelection"
+          id="locationSelection"
+          (change)="onLocationSelected()"
+        >
+          <option value="" disabled selected>Existed Location</option>
+          <option *ngFor="let location of existedLocation" [ngValue]="location">
+            {{ location.locationName }}
+          </option>
+        </select>
+
+        <p>
+          ...Or click on the map to mark where the nuisance located. <br />
+        </p>
+
+        <div (click)="pinpoint()" id="mapinput"></div>
+        
+        <label for="locationName">⚝ Location Name:</label><br />
+        <input
+          type="text"
+          id="locationName"
+          name="locationName"
+          formControlName="locationName"
+          placeholder=" Vancouver"
+        /><br />
+
+        <label for="locationLat">Location Latitude: (Auto-filled)</label><br />
+        <input
+          type="number"
+          id="locationLat"
+          name="locationLat"
+          formControlName="locationLat"
+          placeholder=" (Auto-filled)"
+
+        /><br />
+
+        <label for="locationLong">Location Longitude: (Auto-filled)</label><br />
+        <input
+          type="number"
+          id="locationLong"
+          name="locationLong"
+          formControlName="locationLong"
+          placeholder=" (Auto-filled)"
+
+        /><br />
+
+        <label for="pic">Picture URL:</label><br />
+        <input type="url" id="pic" name="pic" formControlName="pic" /><br />
+
+        <label for="extraInfo">Extra Information:</label><br />
+        <textarea
+          id="extraInfo"
+          name="extraInfo"
+          rows="4"
+          formControlName="extraInfo"
+        ></textarea
+        ><br />
+
+        <button class="submitbtn"
+          [disabled]="!form.valid || !chose_location"
+          (click)="onSubmit()"
+        >
+          Submit Report, Hero is on the way
+        </button>
+      </fieldset>
+    </form>
+    <button class="back-home" [routerLink]="['']">🏠 Back to Report Center 🏠</button>
+
+  </body>
+</html>

@@ -1,0 +1,73 @@
+html,
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f6ece8;
+  height: 100vh;
+  margin: 0;
+  background-image: url("../../assets/report-background.png");
+  background-repeat: repeat-x repeat-y;
+  background-size: 20%;
+}
+
+.card {
+  vertical-align: middle;
+  background-color: #717f90;
+  display: flex;
+  max-width: 60%; /* Adjust as needed */
+  margin: auto; /* Center horizontally */
+  margin-bottom: 20px; /* Adjust as needed */
+  margin-top: 20px;
+  border:none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
+
+.card img {
+  width: 40%; /* Adjust the width of the image */
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+section {
+  color: aliceblue;
+  margin: 3% 5%;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 30%;
+  height: 40px;
+  background-color: #717f90;
+  color: white;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: #505a66;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <div style="color: #a7b4b4">.</div>
+    <div class="card">
+      <img
+        [src]="report.pic || '/assets/default-baddie.png'"
+        alt="Report Image"
+      /><br />
+      <section>
+        <h1>Know Your Adversary</h1>
+        <strong>Location:</strong> {{ report.locationName }} <br />
+        <strong>Trouble Maker:</strong> {{ report.troubleMaker }}<br />
+        <strong>Reported Time:</strong> {{ report.dateTime | date : "medium"
+        }}<br />
+        <strong>Reporter Name:</strong> {{ report.reporterName }} ({{
+          report.reporterPhone
+        }})<br />
+        <strong>Status:</strong> {{ report.status }}<br />
+        <strong>Extra Info:</strong> {{ report.extraInfo || "N/A" }}<br />
+      </section>
+    </div>
+    <button class="back-home" [routerLink]="['']">
+      🏠 Back to Report Center 🏠
+    </button>
+  </body>
+</html>
