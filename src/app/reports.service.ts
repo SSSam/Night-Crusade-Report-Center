@@ -13,8 +13,7 @@ import {
 export class ReportsService {
   report: ReportElement[];
   case_id = 0;
-  url =
-    'https://272.selfip.net/apps/rKFdLf9PJU/collections/NCT_Report/documents/';
+  url ='';
 
   constructor(private http: HttpClient) {
     this.report = [];
